@@ -19,11 +19,15 @@ meta-spec:
 name: Data-HTML-A
 no_index:
   directory:
+    - examples
     - inc
     - t
     - xt
 requires:
+  Error::Pure: 0
+  List::Util: 0
   Mo: 0
+  Readonly: 0
   perl: 5.8.0
 resources:
   bugtracker: https://github.com/michal-josef-spacek/Data-HTML-A/issues
