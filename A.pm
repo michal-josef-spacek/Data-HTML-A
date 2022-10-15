@@ -53,7 +53,7 @@ __END__
 
 =head1 NAME
 
-Data::HTML::A - Data object for HTML link.
+Data::HTML::A - Data object for HTML a element.
 
 =head1 SYNOPSIS
 

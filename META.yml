@@ -1,5 +1,5 @@
 ---
-abstract: 'Data objects for HTML a element.'
+abstract: 'Data object for HTML a element.'
 author:
   - 'Michal Josef Spacek <skim@cpan.org>'
 build_requires:

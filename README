@@ -1,5 +1,5 @@
 NAME
-    Data::HTML::A - Data object for HTML link.
+    Data::HTML::A - Data object for HTML a element.
 
 SYNOPSIS
      use Data::HTML::A;
