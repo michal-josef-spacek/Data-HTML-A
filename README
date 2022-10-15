@@ -1,0 +1,97 @@
+NAME
+    Data::HTML::A - Data object for HTML link.
+
+SYNOPSIS
+     use Data::HTML::A;
+
+     my $obj = Data::HTML::A->new(%params);
+     my $css_class = $obj->css_class;
+     my $name = $obj->name;
+     my $url = $obj->url;
+
+METHODS
+  "new"
+     my $obj = Data::HTML::A->new(%params);
+
+    Constructor.
+
+    Returns instance of object.
+
+    *       "css_class"
+
+            Form CSS class.
+
+            Default value is undef.
+
+    *       "name"
+
+            A name.
+
+            Default value is undef.
+
+    *       "url"
+
+            URL of link.
+
+            Default value is undef.
+
+  "css_class"
+     my $css_class = $obj->css_class;
+
+    Get CSS class for form.
+
+    Returns string.
+
+  "name"
+     my $name = $obj->name;
+
+    Get link name.
+
+    Returns string.
+
+  "url"
+     my $url = $obj->url;
+
+    Get URL of link.
+
+    Returns string.
+
+EXAMPLE
+     use strict;
+     use warnings;
+
+     use Data::HTML::A;
+
+     my $obj = Data::HTML::A->new(
+             'css_class' => 'link',
+             'name' => 'Michal Josef Spacek homepage',
+             'url' => 'https://skim.cz',
+     );
+
+     # Print out.
+     print 'CSS class: '.$obj->css_class."\n";
+     print 'Name: '.$obj->name."\n";
+     print 'URL: '.$obj->url."\n";
+
+     # Output:
+     # TODO
+
+DEPENDENCIES
+    Mo.
+
+REPOSITORY
+    <https://github.com/michal-josef-spacek/Data-HTML-A>
+
+AUTHOR
+    Michal Josef Špaček <mailto:skim@cpan.org>
+
+    <http://skim.cz>
+
+LICENSE AND COPYRIGHT
+    © 2022 Michal Josef Špaček
+
+    BSD 2-Clause License
+
+VERSION
+    0.01
+
