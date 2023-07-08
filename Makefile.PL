@@ -21,6 +21,7 @@ recursive_author_tests('xt');
 requires 'Error::Pure' => 0;
 requires 'List::Util' => 0;
 requires 'Mo' => 0;
+requires 'Mo::utils' => 0.14;
 requires 'Readonly' => 0;
 resources 'bugtracker' => 'https://github.com/michal-josef-spacek/Data-HTML-A/issues';
 resources 'homepage' => 'https://github.com/michal-josef-spacek/Data-HTML-A';

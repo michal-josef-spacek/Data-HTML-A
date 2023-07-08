@@ -6,6 +6,7 @@ use warnings;
 use Error::Pure qw(err);
 use List::Util qw(none);
 use Mo qw(build is);
+use Mo::utils qw(check_array);
 use Readonly;
 
 Readonly::Array our @DATA_TYPES => qw(plain tags);
@@ -38,6 +39,25 @@ sub BUILD {
 	}
 	if (none { $self->{'data_type'} eq $_ } @DATA_TYPES) {
 		err "Parameter 'data_type' has bad value.";
+	}
+
+	# Check data based on type.
+	check_array($self, 'data');
+	foreach my $data_item (@{$self->{'data'}}) {
+		# Plain mode
+		if ($self->{'data_type'} eq 'plain') {
+			if (ref $data_item ne '') {
+				err "Parameter 'data' in 'plain' mode must contain ".
+					'reference to array with scalars.';
+			}
+		# Tags mode.
+		} else {
+			if (ref $data_item ne 'ARRAY') {
+				err "Parameter 'data' in 'tags' mode must contain ".
+					"reference to array with references ".
+					'to array with Tags structure.';
+			}
+		}
 	}
 
 	return;
@@ -141,6 +161,11 @@ Returns string.
 =head1 ERRORS
 
  new():
+         Parameter 'data' must be a array.
+                Value: %s
+                Reference: %s
+         Parameter 'data' in 'plain' mode must contain reference to array with scalars.
+         Parameter 'data' in 'tags' mode must contain reference to array with references to array with Tags structure.
          Parameter 'data_type' has bad value.
 
 =head1 EXAMPLE1

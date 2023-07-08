@@ -27,6 +27,7 @@ requires:
   Error::Pure: 0
   List::Util: 0
   Mo: 0
+  Mo::utils: 0.14
   Readonly: 0
   perl: 5.8.0
 resources:
