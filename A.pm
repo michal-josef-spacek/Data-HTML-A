@@ -105,16 +105,20 @@ Default value is undef.
 
 =item * C<data>
 
-Button data content. It's reference to array.
+Data content. It's reference to array.
+
 Data type of data is described in 'data_type' parameter.
 
 Default value is [].
 
 =item * C<data_type>
 
-Button data type for content.
+Data type for content.
 
 Possible value are: plain tags
+
+The 'plain' content are string(s).
+The 'tags' content is structure described in L<Tags>.
 
 Default value is 'plain'.
 
