@@ -32,4 +32,7 @@ print 'Data type: '.$obj->data_type."\n";
 print 'URL: '.$obj->url."\n";
 
 # Output:
-# TODO
+# CSS class: link
+# Data (serialized): <span class="span-link">Link</span>
+# Data type: tags
+# URL: https://skim.cz
