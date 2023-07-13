@@ -183,13 +183,13 @@ Returns string.
 
  my $obj = Data::HTML::A->new(
          'css_class' => 'link',
-         'data' => 'Michal Josef Spacek homepage',
+         'data' => ['Michal Josef Spacek homepage'],
          'url' => 'https://skim.cz',
  );
 
  # Print out.
  print 'CSS class: '.$obj->css_class."\n";
- print 'Data: '.$obj->data."\n";
+ print 'Data: '.(join '', @{$obj->data})."\n";
  print 'Data type: '.$obj->data_type."\n";
  print 'URL: '.$obj->url."\n";
 
