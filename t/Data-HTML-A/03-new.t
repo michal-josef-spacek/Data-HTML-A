@@ -16,7 +16,7 @@ $obj = Data::HTML::A->new(
 	'css_class' => 'button-nice',
 	'data' => ['simple button'],
 	'data_type' => 'plain',
-	'url' => 'http://example.com',
+	'url' => 'https://example.com',
 );
 isa_ok($obj, 'Data::HTML::A');
 
@@ -25,7 +25,7 @@ $obj = Data::HTML::A->new(
 	'css_class' => 'button-nice',
 	'data' => [['d', 'simple button']],
 	'data_type' => 'tags',
-	'url' => 'http://example.com',
+	'url' => 'https://example.com',
 );
 isa_ok($obj, 'Data::HTML::A');
 
